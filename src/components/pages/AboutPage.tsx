@@ -1,3 +1,4 @@
+import { ScaleFade } from "@chakra-ui/react";
 import React from "react";
 import ProfileCard from "../molecules/ProfileCard";
 import PortfolioLayout from "../template/PortfolioLayout";

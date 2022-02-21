@@ -3,18 +3,18 @@ import {
   Flex,
   Heading,
   HStack,
-  LinkOverlay,
+  Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import React from "react";
-// import { Container } from './styles';
+import ProfilePic from "/images/PicProfile.png";
 
 const ProfileCard: React.FC = () => {
   return (
     <Box
-      bgColor={"#F1FAEE"}
+      bgColor={"main"}
       width="40%"
       height={"60%"}
       position="absolute"
@@ -24,23 +24,15 @@ const ProfileCard: React.FC = () => {
       left={0}
       mx="auto"
       my={"auto"}
-      boxShadow="dark-lg"
+      boxShadow="0rem 0.5rem 1.4rem #ffffff22"
       borderRadius={"3xl"}
       overflow="hidden"
     >
       <Flex flexDir={"row"} w={"100%"} h="80%">
-        <Stack
-          spacing={3}
-          alignItems={"center"}
-          justifyContent={"center"}
-          w="50%"
-        >
-          <Box
-            borderRadius={"full"}
-            h={"10rem"}
-            w="10rem"
-            bgColor={"placeHoldColor"}
-          ></Box>
+        <Stack alignItems={"center"} justifyContent={"center"} w="50%">
+          <Box borderRadius={"full"} h={"10rem"} w="10rem" marginBottom={20}>
+            <Image src={ProfilePic} />
+          </Box>
           <Heading color={"secondary"} size={"md"}>
             Cristovão Farias
           </Heading>
@@ -49,13 +41,18 @@ const ProfileCard: React.FC = () => {
           </Text>
         </Stack>
         <Stack
-          spacing={3}
+          spacing={10}
           alignItems={"center"}
           justifyContent={"center"}
           w="50%"
           color={"secondary"}
+          marginRight="5rem"
         >
-          <Heading>Hi my name is Cristovão</Heading>
+          <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
+          <Text textAlign={"center"} fontSize={"2xl"}>
+            Currently working and developing awesome products at We are
+            reasonable people.
+          </Text>
         </Stack>
       </Flex>
       <Box color={"secondary"} w={"100%"} h="20%" bgColor="primary">

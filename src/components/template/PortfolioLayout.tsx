@@ -27,7 +27,20 @@ const PortfolioLayout: React.FC = ({ children }) => {
       </HStack>
       {children}
       <HStack h="10%" w="100%" bgColor={"main"}>
-        <VStack bgColor={"placeHoldColor"} h="100%" w="50%"></VStack>
+        <VStack
+          display={"flex"}
+          align="center"
+          justify={"flex-start"}
+          h="100%"
+          w="50%"
+        >
+          <Heading fontSize={20} color={"secondary"}>
+            E-mail
+          </Heading>
+          <Heading fontSize={16} color={"secondary"}>
+            cristovao.teles.farias@gmail.com
+          </Heading>
+        </VStack>
         <Flex align={"center"} px={10} flexDir="row-reverse" w="50%" h="10%">
           <Heading fontSize={20} float="right" color={"secondary"}>
             @ by Cristovão Farias 2021
