@@ -1,5 +1,12 @@
-import { Flex, Link, ListItem, UnorderedList } from "@chakra-ui/react";
+import {
+  Flex,
+  ListItem,
+  UnorderedList,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
+
 import React from "react";
+import { Link } from "react-router-dom";
 const Navheader: React.FC = () => {
   return (
     <Flex
@@ -10,14 +17,14 @@ const Navheader: React.FC = () => {
       h="10%"
       px={12}
     >
-      <Link
+      <ChakraLink
         color={"secondary"}
         fontWeight="bold"
         fontSize={"lg"}
         float={"left"}
       >
         Cristovão Farias
-      </Link>
+      </ChakraLink>
       <UnorderedList
         color={"secondary"}
         display={"flex"}
@@ -27,29 +34,33 @@ const Navheader: React.FC = () => {
         float={"right"}
       >
         <ListItem>
-          <Link size={"md"} float={"left"}>
-            About me
+          <Link to={"/"}>
+            <ChakraLink size={"md"} float={"left"}>
+              About me
+            </ChakraLink>
           </Link>
         </ListItem>
         <ListItem>
-          <Link size={"md"} float={"left"}>
+          <ChakraLink size={"md"} float={"left"}>
             Resume
+          </ChakraLink>
+        </ListItem>
+        <ListItem>
+          <Link to="/projects">
+            <ChakraLink size={"md"} float={"left"}>
+              Projects
+            </ChakraLink>
           </Link>
         </ListItem>
         <ListItem>
-          <Link size={"md"} float={"left"}>
-            Projects
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link size={"md"} float={"left"}>
+          <ChakraLink size={"md"} float={"left"}>
             Blog
-          </Link>
+          </ChakraLink>
         </ListItem>
         <ListItem>
-          <Link size={"md"} float={"left"}>
+          <ChakraLink size={"md"} float={"left"}>
             Contacts
-          </Link>
+          </ChakraLink>
         </ListItem>
       </UnorderedList>
     </Flex>
