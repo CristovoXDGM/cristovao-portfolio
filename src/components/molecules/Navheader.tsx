@@ -3,10 +3,12 @@ import {
   ListItem,
   UnorderedList,
   Link as ChakraLink,
+  styled,
 } from "@chakra-ui/react";
 
 import React from "react";
 import { Link } from "react-router-dom";
+import CustomChakraLink from "../atoms/CustomChakraLink";
 
 const Navheader: React.FC = () => {
   return (
@@ -18,14 +20,14 @@ const Navheader: React.FC = () => {
       h="10%"
       px={12}
     >
-      <ChakraLink
+      <CustomChakraLink
         color={"secondary"}
         fontWeight="bold"
         fontSize={"lg"}
         float={"left"}
       >
         Cristovão Farias
-      </ChakraLink>
+      </CustomChakraLink>
       <UnorderedList
         color={"secondary"}
         display={"flex"}
@@ -36,28 +38,34 @@ const Navheader: React.FC = () => {
       >
         <ListItem>
           <Link to={"/"}>
-            <ChakraLink size={"md"}>About me</ChakraLink>
+            <CustomChakraLink size={"md"}>About me</CustomChakraLink>
           </Link>
         </ListItem>
         <ListItem>
-          <ChakraLink
+          <CustomChakraLink
             href="/docs/CristovaoResume.pdf"
             download={"CristovaoResume.pdf"}
             size={"md"}
           >
             Resume
-          </ChakraLink>
+          </CustomChakraLink>
         </ListItem>
         <ListItem>
           <Link to="/projects">
-            <ChakraLink size={"md"}>Projects</ChakraLink>
+            <CustomChakraLink size={"md"}>Projects</CustomChakraLink>
           </Link>
         </ListItem>
         <ListItem>
-          <ChakraLink size={"md"}>Blog</ChakraLink>
+          <CustomChakraLink
+            href="https://dev.to/cristovoxdgm"
+            isExternal
+            size={"md"}
+          >
+            Blog
+          </CustomChakraLink>
         </ListItem>
         <ListItem>
-          <ChakraLink size={"md"}>Contacts</ChakraLink>
+          <CustomChakraLink size={"md"}>Contacts</CustomChakraLink>
         </ListItem>
       </UnorderedList>
     </Flex>

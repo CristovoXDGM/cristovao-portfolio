@@ -4,6 +4,7 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -77,11 +78,34 @@ const ProfileCard: React.FC = () => {
           justify={"center"}
           spacing={20}
         >
-          <Icon icon="ant-design:instagram-filled" height="3.2rem" />
-
-          <Icon icon="akar-icons:linkedin-box-fill" height="2.8rem" />
-          <Icon icon="akar-icons:github-fill" height="2.8rem" />
-          <Icon icon="ant-design:youtube-filled" height="3.8rem" />
+          <Link
+            _hover={{ color: "main" }}
+            href="https://www.instagram.com/kiustudios/"
+            isExternal
+          >
+            <Icon icon="ant-design:instagram-filled" height="3.2rem" />
+          </Link>
+          <Link
+            _hover={{ color: "main" }}
+            href="https://www.linkedin.com/in/cristovaofarias/"
+            isExternal
+          >
+            <Icon icon="akar-icons:linkedin-box-fill" height="2.8rem" />
+          </Link>
+          <Link
+            _hover={{ color: "main" }}
+            href="https://github.com/cristovoxdgm"
+            isExternal
+          >
+            <Icon icon="akar-icons:github-fill" height="2.8rem" />
+          </Link>
+          <Link
+            _hover={{ color: "main" }}
+            href="https://www.youtube.com/channel/UCUdmXvjS1pBarFUD5cUpeBQ"
+            isExternal
+          >
+            <Icon icon="ant-design:youtube-filled" height="3.8rem" />
+          </Link>
         </HStack>
       </Box>
     </BoxAnimated>
