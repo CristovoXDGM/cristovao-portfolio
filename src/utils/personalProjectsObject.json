@@ -1,0 +1,34 @@
+{
+    "projects":[
+        {
+            "name":"Link gen",
+            "image":"/images/LinkGenPrint.png",
+            "project_link":"https://play.google.com/store/apps/details?id=com.kiustudios.link_generator_app"
+            
+        },
+        {
+            "name":"Feetdiabetes app",
+            "image":"/images/feetDiabetesApp.png",
+            "project_link":"https://play.google.com/store/apps/details?id=com.roboticacesmac.feetdiabetes_app"
+            
+        },
+        {
+            "name":"Zero violence App",
+            "image":"/images/ViolenciaZeroApp.png",
+            "project_link":"https://play.google.com/store/apps/details?id=br.gov.al.roboticacesmac.seprev.violenciazero"
+            
+        },
+        {
+            "name":"Kiustudios links",
+            "image":"/images/KiuStudiosLink.png",
+            "project_link":"https://kiustudios.netlify.app/"
+            
+        },
+        {
+            "name":"React gallery app",
+            "image":"/images/ReactGallery.png",
+            "project_link":"https://cristovao-react-gallery.netlify.app/"
+            
+        }
+    ]
+}

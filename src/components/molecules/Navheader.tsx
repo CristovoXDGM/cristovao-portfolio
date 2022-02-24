@@ -40,7 +40,13 @@ const Navheader: React.FC = () => {
           </Link>
         </ListItem>
         <ListItem>
-          <ChakraLink size={"md"}>Resume</ChakraLink>
+          <ChakraLink
+            href="/docs/CristovaoResume.pdf"
+            download={"CristovaoResume.pdf"}
+            size={"md"}
+          >
+            Resume
+          </ChakraLink>
         </ListItem>
         <ListItem>
           <Link to="/projects">
