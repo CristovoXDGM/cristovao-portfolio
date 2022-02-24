@@ -9,11 +9,15 @@ import {
 } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import React from "react";
+import {
+  BoxAnimated,
+  boxAnimatedVariant,
+} from "../../styles/animatedComponents";
 import ProfilePic from "/images/PicProfile.png";
 
 const ProfileCard: React.FC = () => {
   return (
-    <Box
+    <BoxAnimated
       bgColor={"main"}
       width="40%"
       height={"60%"}
@@ -21,10 +25,13 @@ const ProfileCard: React.FC = () => {
       right={0}
       top={0}
       bottom={0}
+      variants={boxAnimatedVariant}
+      initial="hidden"
+      animate="visible"
       left={0}
       mx="auto"
       my={"auto"}
-      boxShadow="0rem 0.5rem 1.4rem #ffffff22"
+      boxShadow="0rem 0.4rem 0.5rem #ffffff20"
       borderRadius={"3xl"}
       overflow="hidden"
     >
@@ -37,7 +44,7 @@ const ProfileCard: React.FC = () => {
             Cristovão Farias
           </Heading>
           <Text color={"secondary"} size={"sm"}>
-            Mobile Software Engineer
+            Frontend / Mobile Engineer
           </Text>
         </Stack>
         <Stack
@@ -49,13 +56,20 @@ const ProfileCard: React.FC = () => {
           marginRight="5rem"
         >
           <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
-          <Text textAlign={"center"} fontSize={"2xl"}>
-            Currently working and developing awesome products at We are
-            reasonable people.
+          <Text textAlign={"justify"} fontSize={"md"}>
+            A lover of technology and games, Looking for an opportunity to
+            create innovative products and solutions. I really enjoy being
+            self-taught, learning quickly whatever is necessary for the project,
+            main focusing on mobile development using Flutter.
           </Text>
         </Stack>
       </Flex>
-      <Box color={"secondary"} w={"100%"} h="20%" bgColor="primary">
+      <Box
+        color={"secondary"}
+        w={"100%"}
+        h="20%"
+        bgGradient={"linear(to-r,placeHoldColor,primary)"}
+      >
         <HStack
           h="100%"
           align={"center"}
@@ -70,7 +84,7 @@ const ProfileCard: React.FC = () => {
           <Icon icon="ant-design:youtube-filled" height="3.8rem" />
         </HStack>
       </Box>
-    </Box>
+    </BoxAnimated>
   );
 };
 

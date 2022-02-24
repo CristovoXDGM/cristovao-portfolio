@@ -23,7 +23,11 @@ const PortfolioLayout: React.FC = ({ children }) => {
       <Navheader />
       <HStack h="80%" w={"100%"}>
         <Box h="100%" w="50%" bgColor={"main"}></Box>
-        <Box h="100%" w="50%" bgColor={"primary"}></Box>
+        <Box
+          h="100%"
+          w="50%"
+          bgGradient={"linear(to-l,placeHoldColor,primary)"}
+        ></Box>
       </HStack>
       {children}
       <HStack h="10%" w="100%" bgColor={"main"}>

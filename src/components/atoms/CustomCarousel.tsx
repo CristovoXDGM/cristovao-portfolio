@@ -1,8 +1,8 @@
+import { Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import { Box } from "@chakra-ui/react";
 
-const CustomCarousel: React.FC = ({ children }) => {
+const CustomCarousel: React.FC = () => {
   const [index, setIndex] = useState(0);
 
   const handleActiveIndex = (selectedIndex: any, e: any) => {
@@ -24,7 +24,7 @@ const CustomCarousel: React.FC = ({ children }) => {
       }}
     >
       <Carousel.Item>
-        <Box bg={"#61af3d"} w={800} h={600}></Box>
+        <Box borderRadius={20} bg={"main"} w={800} h={600}></Box>
       </Carousel.Item>
       <Carousel.Item>
         <Box bg={"#cf1c1c"} w={800} h={600}></Box>

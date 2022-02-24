@@ -1,15 +1,24 @@
-import { AbsoluteCenter, Box } from "@chakra-ui/react";
-import React from "react";
-import CustomCarousel from "../atoms/CustomCarousel";
-import ProfileCard from "../molecules/ProfileCard";
-import PortfolioLayout from "../template/PortfolioLayout";
+import { AbsoluteCenter } from "@chakra-ui/react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
+import {
+  BoxAnimated,
+  boxAnimatedVariant,
+} from "../../styles/animatedComponents";
+import CustomCarousel from "../atoms/CustomCarousel";
+import PortfolioLayout from "../template/PortfolioLayout";
 
 const ProjectsPage: React.FC = () => {
   return (
     <PortfolioLayout>
       <AbsoluteCenter>
-        <CustomCarousel />
+        <BoxAnimated
+          variants={boxAnimatedVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <CustomCarousel />
+        </BoxAnimated>
       </AbsoluteCenter>
     </PortfolioLayout>
   );

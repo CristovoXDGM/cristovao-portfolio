@@ -7,6 +7,7 @@ import {
 
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Navheader: React.FC = () => {
   return (
     <Flex
@@ -35,32 +36,22 @@ const Navheader: React.FC = () => {
       >
         <ListItem>
           <Link to={"/"}>
-            <ChakraLink size={"md"} float={"left"}>
-              About me
-            </ChakraLink>
+            <ChakraLink size={"md"}>About me</ChakraLink>
           </Link>
         </ListItem>
         <ListItem>
-          <ChakraLink size={"md"} float={"left"}>
-            Resume
-          </ChakraLink>
+          <ChakraLink size={"md"}>Resume</ChakraLink>
         </ListItem>
         <ListItem>
           <Link to="/projects">
-            <ChakraLink size={"md"} float={"left"}>
-              Projects
-            </ChakraLink>
+            <ChakraLink size={"md"}>Projects</ChakraLink>
           </Link>
         </ListItem>
         <ListItem>
-          <ChakraLink size={"md"} float={"left"}>
-            Blog
-          </ChakraLink>
+          <ChakraLink size={"md"}>Blog</ChakraLink>
         </ListItem>
         <ListItem>
-          <ChakraLink size={"md"} float={"left"}>
-            Contacts
-          </ChakraLink>
+          <ChakraLink size={"md"}>Contacts</ChakraLink>
         </ListItem>
       </UnorderedList>
     </Flex>
