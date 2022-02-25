@@ -20,7 +20,7 @@ const Navheader: React.FC = () => {
       <CustomChakraLink
         color={"secondary"}
         fontWeight="bold"
-        fontSize={"lg"}
+        fontSize={isLargerThan800 ? "lg" : "md"}
         float={"left"}
         w="50%"
       >

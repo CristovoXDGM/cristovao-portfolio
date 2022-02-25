@@ -6,10 +6,10 @@ import {
   Flex,
   HStack,
   Image,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import LinkGenAppImage from "/images/LinkGenPrint.png";
 
 import projectsJson from "../../utils/personalProjectsObject.json";
 
@@ -17,14 +17,15 @@ const projects = projectsJson.projects;
 
 const CustomCarousel: React.FC = () => {
   const [index, setIndex] = useState(0);
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   const handleActiveIndex = (selectedIndex: any, e: any) => {
     setIndex(selectedIndex);
   };
 
   const slideSizes = {
-    width: 900,
-    height: 600,
+    width: isLargerThan800 ? 900 : "22rem",
+    height: isLargerThan800 ? 580 : 510,
   };
 
   return (
@@ -34,22 +35,22 @@ const CustomCarousel: React.FC = () => {
       indicators={false}
       prevIcon={
         <ChevronLeftIcon
-          marginLeft={"-25rem"}
-          color={"secondary"}
-          boxSize={20}
+          marginLeft={isLargerThan800 ? "-25rem" : 0}
+          color={isLargerThan800 ? "secondary" : "main"}
+          boxSize={isLargerThan800 ? 20 : 8}
         />
       }
       nextIcon={
         <ChevronRightIcon
-          marginLeft={"25rem"}
-          color={"secondary"}
-          boxSize={20}
+          marginLeft={isLargerThan800 ? "25rem" : 0}
+          color={isLargerThan800 ? "secondary" : "main"}
+          boxSize={isLargerThan800 ? 20 : 8}
         />
       }
       style={{
         display: "flex",
         ...slideSizes,
-        borderRadius: 20,
+
         margin: "auto",
         alignSelf: "center",
         justifySelf: "center",
@@ -57,7 +58,7 @@ const CustomCarousel: React.FC = () => {
     >
       {projects.map((project: any) => (
         <Carousel.Item>
-          <Box bg={"secondary"} borderRadius={"1.4rem"} {...slideSizes}>
+          <Box bg={"secondary"} {...slideSizes}>
             <AbsoluteCenter>
               <Flex
                 border={"2px"}
@@ -69,11 +70,12 @@ const CustomCarousel: React.FC = () => {
                 justify={"center"}
                 my="2rem"
                 height={"24rem"}
+                w={isLargerThan800 ? "100%" : "80%"}
                 bgColor={"main"}
               >
                 <Image fit={"cover"} src={project.image} alt={project.name} />
               </Flex>
-              <HStack spacing={"15rem"} w={"100%"}>
+              <HStack spacing={isLargerThan800 ? "15rem" : "1rem"} w={"100%"}>
                 <Button
                   w={"10rem"}
                   bgColor={"main"}

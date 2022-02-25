@@ -6,19 +6,20 @@ export const theme = extendTheme({
         Menu:{
             baseStyle:{
                 list: {
-                    bgColor:"primary"
+                  bgGradient:"linear(to-r,placeHoldColor,primary)",
                     
                 },
                 item:{
-                    bgColor:"primary",
+                    
+                    bgGradient:"linear(to-r,placeHoldColor,primary)",
                     _focus: {
-                        bg: "primaryFocus",
+                        bg: "placeHoldColor",
                       },
                       _active: {
-                        bg:   "primaryFocus",
+                        bg:   "placeHoldColor",
                       },
                       _expanded: {
-                        bg: "primaryFocus",
+                        bg: "placeHoldColor",
                       },
                       _disabled: {
                         opacity: 0.4,
