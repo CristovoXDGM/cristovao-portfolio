@@ -1,16 +1,13 @@
-import {
-  Flex,
-  ListItem,
-  UnorderedList,
-  Link as ChakraLink,
-  styled,
-} from "@chakra-ui/react";
-
+import { Flex, ListItem, UnorderedList } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import CustomChakraLink from "../atoms/CustomChakraLink";
+import { useMediaQuery } from "@chakra-ui/react";
+import CustomMobileMenu from "./CustomMobileMenu";
 
 const Navheader: React.FC = () => {
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   return (
     <Flex
       justifyContent={"space-between"}
@@ -25,49 +22,55 @@ const Navheader: React.FC = () => {
         fontWeight="bold"
         fontSize={"lg"}
         float={"left"}
+        w="50%"
       >
         Cristovão Farias
       </CustomChakraLink>
-      <UnorderedList
-        color={"secondary"}
-        display={"flex"}
-        justifyContent={"space-around"}
-        width={"20%"}
-        listStyleType={"none"}
-        float={"right"}
-      >
-        <ListItem>
-          <Link to={"/"}>
-            <CustomChakraLink size={"md"}>About me</CustomChakraLink>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <CustomChakraLink
-            href="/docs/CristovaoResume.pdf"
-            download={"CristovaoResume.pdf"}
-            size={"md"}
-          >
-            Resume
-          </CustomChakraLink>
-        </ListItem>
-        <ListItem>
-          <Link to="/projects">
-            <CustomChakraLink size={"md"}>Projects</CustomChakraLink>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <CustomChakraLink
-            href="https://dev.to/cristovoxdgm"
-            isExternal
-            size={"md"}
-          >
-            Blog
-          </CustomChakraLink>
-        </ListItem>
-        <ListItem>
-          <CustomChakraLink size={"md"}>Contacts</CustomChakraLink>
-        </ListItem>
-      </UnorderedList>
+
+      {isLargerThan800 ? (
+        <UnorderedList
+          w="50%"
+          color={"secondary"}
+          display={"flex"}
+          justifyContent={"space-evenly"}
+          listStyleType={"none"}
+          float={"right"}
+        >
+          <ListItem>
+            <Link to={"/"}>
+              <CustomChakraLink size={"md"}>About me</CustomChakraLink>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <CustomChakraLink
+              href="/docs/CristovaoResume.pdf"
+              download={"CristovaoResume.pdf"}
+              size={"md"}
+            >
+              Download Resume
+            </CustomChakraLink>
+          </ListItem>
+          <ListItem>
+            <Link to="/projects">
+              <CustomChakraLink size={"md"}>Projects</CustomChakraLink>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <CustomChakraLink
+              href="https://dev.to/cristovoxdgm"
+              isExternal
+              size={"md"}
+            >
+              Blog
+            </CustomChakraLink>
+          </ListItem>
+          <ListItem>
+            <CustomChakraLink size={"md"}>Contacts</CustomChakraLink>
+          </ListItem>
+        </UnorderedList>
+      ) : (
+        <CustomMobileMenu />
+      )}
     </Flex>
   );
 };

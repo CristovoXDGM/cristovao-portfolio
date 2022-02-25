@@ -5,7 +5,7 @@ import AboutPage from "./components/pages/AboutPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider resetCSS theme={theme}>
       <Routes>
         <Route path="/" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />

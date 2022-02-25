@@ -5,6 +5,7 @@ import {
   FlexProps,
   Heading,
   HStack,
+  useMediaQuery,
   VStack,
 } from "@chakra-ui/react";
 import Navheader from "../molecules/Navheader";
@@ -17,6 +18,8 @@ const PortfolioLayout: React.FC = ({ children }) => {
     h: "100vh",
     bgColor: "main",
   };
+
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
 
   return (
     <Flex {...customFlexProp}>
@@ -32,11 +35,11 @@ const PortfolioLayout: React.FC = ({ children }) => {
       {children}
       <HStack h="10%" w="100%" bgColor={"main"}>
         <VStack
-          display={"flex"}
+          display={isLargerThan800 ? "flex" : "none"}
           align="center"
           justify={"flex-start"}
           h="100%"
-          w="50%"
+          w={"50%"}
         >
           <Heading fontSize={20} color={"secondary"}>
             E-mail
@@ -45,7 +48,13 @@ const PortfolioLayout: React.FC = ({ children }) => {
             cristovao.teles.farias@gmail.com
           </Heading>
         </VStack>
-        <Flex align={"center"} px={10} flexDir="row-reverse" w="50%" h="10%">
+        <Flex
+          w={isLargerThan800 ? "50%" : "100%"}
+          align={"center"}
+          px={10}
+          flexDir={isLargerThan800 ? "row-reverse" : "row"}
+          h="10%"
+        >
           <Heading fontSize={20} float="right" color={"secondary"}>
             @ by Cristovão Farias 2021
           </Heading>

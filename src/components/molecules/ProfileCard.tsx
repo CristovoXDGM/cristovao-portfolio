@@ -7,6 +7,7 @@ import {
   Link,
   Stack,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import React from "react";
@@ -17,11 +18,13 @@ import {
 import ProfilePic from "/images/PicProfile.png";
 
 const ProfileCard: React.FC = () => {
+  const [isLargerThan1500] = useMediaQuery("(min-width:1500px)");
+  const [isLargerThan800] = useMediaQuery("(min-width:800px)");
   return (
     <BoxAnimated
       bgColor={"main"}
-      width="40%"
-      height={"60%"}
+      width={isLargerThan1500 ? "40%" : "80%"}
+      height={isLargerThan1500 ? "60%" : "77%"}
       position="absolute"
       right={0}
       top={0}
@@ -37,7 +40,12 @@ const ProfileCard: React.FC = () => {
       overflow="hidden"
     >
       <Flex flexDir={"row"} w={"100%"} h="80%">
-        <Stack alignItems={"center"} justifyContent={"center"} w="50%">
+        <Stack
+          display={isLargerThan1500 ? "flex" : "none"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          w="50%"
+        >
           <Box borderRadius={"full"} h={"10rem"} w="10rem" marginBottom={20}>
             <Image src={ProfilePic} />
           </Box>
@@ -52,9 +60,13 @@ const ProfileCard: React.FC = () => {
           spacing={10}
           alignItems={"center"}
           justifyContent={"center"}
-          w="50%"
+          w={isLargerThan1500 ? "50%" : "100%"}
+          h={isLargerThan1500 ? "100%" : "90%"}
           color={"secondary"}
-          marginRight="5rem"
+          marginRight={isLargerThan1500 ? "5rem" : 0}
+          paddingTop={isLargerThan1500 ? 0 : "8rem"}
+          paddingX={isLargerThan1500 ? 0 : "2rem"}
+          overflowY={isLargerThan1500 ? "hidden" : "scroll"}
         >
           <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
           <Text textAlign={"justify"} fontSize={"md"}>
@@ -70,6 +82,7 @@ const ProfileCard: React.FC = () => {
         w={"100%"}
         h="20%"
         bgGradient={"linear(to-r,placeHoldColor,primary)"}
+        scale={isLargerThan1500 ? 1 : 0.3}
       >
         <HStack
           h="100%"
@@ -77,6 +90,7 @@ const ProfileCard: React.FC = () => {
           w="100%"
           justify={"center"}
           spacing={20}
+          transform={isLargerThan800 ? "scale(1)" : "scale(0.5)"}
         >
           <Link
             _hover={{ color: "main" }}
