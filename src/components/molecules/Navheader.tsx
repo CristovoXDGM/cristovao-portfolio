@@ -65,7 +65,9 @@ const Navheader: React.FC = () => {
             </CustomChakraLink>
           </ListItem>
           <ListItem>
-            <CustomChakraLink size={"md"}>Contacts</CustomChakraLink>
+            <Link to="/contacts">
+              <CustomChakraLink size={"md"}>Contacts</CustomChakraLink>
+            </Link>
           </ListItem>
         </UnorderedList>
       ) : (
