@@ -35,7 +35,7 @@ const ProfileCard: React.FC = () => {
       left={0}
       mx="auto"
       my={"auto"}
-      boxShadow="0rem 0.4rem 0.5rem #ffffff20"
+      boxShadow="0rem 0.2rem 0.5rem #ffecd184"
       borderRadius={"3xl"}
       overflow="hidden"
     >
@@ -73,7 +73,8 @@ const ProfileCard: React.FC = () => {
             A lover of technology and games, Looking for an opportunity to
             create innovative products and solutions. I really enjoy being
             self-taught, learning quickly whatever is necessary for the project,
-            main focusing on mobile development using Flutter.
+            main focusing on mobile development using Flutter. Follow my
+            contacts link bellow:
           </Text>
         </Stack>
       </Flex>
@@ -81,7 +82,7 @@ const ProfileCard: React.FC = () => {
         color={"secondary"}
         w={"100%"}
         h="20%"
-        bgGradient={"linear(to-r,placeHoldColor,primary)"}
+        bgColor={"placeHoldColor"}
         scale={isLargerThan1500 ? 1 : 0.3}
       >
         <HStack

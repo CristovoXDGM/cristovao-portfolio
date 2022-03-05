@@ -6,12 +6,12 @@ export const theme = extendTheme({
         Menu:{
             baseStyle:{
                 list: {
-                  bgGradient:"linear(to-r,placeHoldColor,primary)",
+                  bgColor:" placeHoldColor ",
                     
                 },
                 item:{
                     
-                    bgGradient:"linear(to-r,placeHoldColor,primary)",
+                  bgColor:" placeHoldColor ",
                     _focus: {
                         bg: "placeHoldColor",
                       },
@@ -30,11 +30,11 @@ export const theme = extendTheme({
         }
     },
     colors:{
-       main:"#010300",
-       primary:"#334526",
-       primaryFocus:"#526E3E",
-       secondary:"#FFFFFF",
-       placeHoldColor:"#49A805"
+       main:"#001524",
+       primary:"#15616D",
+       primaryFocus:"#208C9C",
+       secondary:"#FFECD1",
+       placeHoldColor:"#FF7D00"
     },
 
 });

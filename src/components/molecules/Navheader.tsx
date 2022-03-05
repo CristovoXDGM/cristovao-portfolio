@@ -1,8 +1,7 @@
-import { Flex, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Flex, ListItem, UnorderedList, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import CustomChakraLink from "../atoms/CustomChakraLink";
-import { useMediaQuery } from "@chakra-ui/react";
 import CustomMobileMenu from "./CustomMobileMenu";
 
 const Navheader: React.FC = () => {
@@ -63,11 +62,6 @@ const Navheader: React.FC = () => {
             >
               Blog
             </CustomChakraLink>
-          </ListItem>
-          <ListItem>
-            <Link to="/contacts">
-              <CustomChakraLink size={"md"}>Contacts</CustomChakraLink>
-            </Link>
           </ListItem>
         </UnorderedList>
       ) : (
