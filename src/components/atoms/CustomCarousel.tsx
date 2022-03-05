@@ -76,14 +76,18 @@ const CustomCarousel: React.FC = () => {
               >
                 <Image fit={"cover"} src={project.image} alt={project.name} />
               </Flex>
-              <Heading
-                fontSize={20}
-                marginBottom="2rem"
-                textAlign={"center"}
-                color={"main"}
-              >
-                {project.name}
-              </Heading>
+              {isLargerThan800 ? (
+                <Heading
+                  fontSize={20}
+                  marginBottom="2rem"
+                  textAlign={"center"}
+                  color={"main"}
+                >
+                  {project.name}
+                </Heading>
+              ) : (
+                <Box></Box>
+              )}
               <HStack spacing={isLargerThan800 ? "15rem" : "1rem"} w={"100%"}>
                 <Button
                   w={"10rem"}

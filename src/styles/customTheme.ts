@@ -6,12 +6,12 @@ export const theme = extendTheme({
         Menu:{
             baseStyle:{
                 list: {
-                  bgColor:" placeHoldColor ",
+                  bgColor:"placeHoldColor",
                     
                 },
                 item:{
                     
-                  bgColor:" placeHoldColor ",
+                  bgColor:"placeHoldColor",
                     _focus: {
                         bg: "placeHoldColor",
                       },

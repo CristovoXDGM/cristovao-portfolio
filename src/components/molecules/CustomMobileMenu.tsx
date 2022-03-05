@@ -20,7 +20,7 @@ const CustomMobileMenu: React.FC = () => {
         as={IconButton}
         icon={<HamburgerIcon />}
         variant={"outline"}
-        bgGradient="linear(to-r,placeHoldColor,primary)"
+        bgColor="placeHoldColor"
         _active={{ bgColor: "primaryFocus" }}
         _focus={{ bgColor: "primaryFocus" }}
         _hover={{ bgColor: "primaryFocus" }}
