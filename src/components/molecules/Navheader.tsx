@@ -12,9 +12,12 @@ const Navheader: React.FC = () => {
       justifyContent={"space-between"}
       alignItems={"center"}
       flexDir={"row"}
+      position="fixed"
       w={"100%"}
       h="10%"
+      bgColor={"main"}
       px={12}
+      zIndex={2}
     >
       <CustomChakraLink
         color={"secondary"}

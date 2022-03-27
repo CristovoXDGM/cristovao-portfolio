@@ -17,35 +17,37 @@ import projectsJson from "../../utils/personalProjectsObject.json";
 const projects = projectsJson.projects;
 
 const CustomCarousel: React.FC = () => {
-  const [index, setIndex] = useState(0);
-  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [CarouselIndex, setCarouselIndex] = useState(0);
+  const [isWidthLargerThan800] = useMediaQuery("(min-width: 800px)");
+  const [isHeightLargerThan800] = useMediaQuery("(min-height: 800px)");
 
   const handleActiveIndex = (selectedIndex: any, e: any) => {
-    setIndex(selectedIndex);
+    setCarouselIndex(selectedIndex);
   };
 
   const slideSizes = {
-    width: isLargerThan800 ? 900 : "22rem",
-    height: isLargerThan800 ? 580 : 510,
+    width: isWidthLargerThan800 ? 900 : "22rem",
+    height: isWidthLargerThan800 ? 580 : 510,
   };
 
   return (
     <Carousel
-      activeIndex={index}
+      activeIndex={CarouselIndex}
       onSelect={handleActiveIndex}
       indicators={false}
+      zIndex={1}
       prevIcon={
         <ChevronLeftIcon
-          marginLeft={isLargerThan800 ? "-25rem" : 0}
-          color={isLargerThan800 ? "secondary" : "main"}
-          boxSize={isLargerThan800 ? 20 : 8}
+          marginLeft={isWidthLargerThan800 ? "-25rem" : 0}
+          color={isWidthLargerThan800 ? "secondary" : "main"}
+          boxSize={isWidthLargerThan800 ? 20 : 8}
         />
       }
       nextIcon={
         <ChevronRightIcon
-          marginLeft={isLargerThan800 ? "25rem" : 0}
-          color={isLargerThan800 ? "secondary" : "main"}
-          boxSize={isLargerThan800 ? 20 : 8}
+          marginLeft={isWidthLargerThan800 ? "25rem" : 0}
+          color={isWidthLargerThan800 ? "secondary" : "main"}
+          boxSize={isWidthLargerThan800 ? 20 : 8}
         />
       }
       style={{
@@ -71,12 +73,12 @@ const CustomCarousel: React.FC = () => {
                 justify={"center"}
                 my="2rem"
                 height={"24rem"}
-                w={isLargerThan800 ? "100%" : "80%"}
+                w={isWidthLargerThan800 ? "100%" : "80%"}
                 bgColor={"main"}
               >
                 <Image fit={"cover"} src={project.image} alt={project.name} />
               </Flex>
-              {isLargerThan800 ? (
+              {isWidthLargerThan800 ? (
                 <Heading
                   fontSize={20}
                   marginBottom="2rem"
@@ -88,7 +90,10 @@ const CustomCarousel: React.FC = () => {
               ) : (
                 <Box></Box>
               )}
-              <HStack spacing={isLargerThan800 ? "15rem" : "1rem"} w={"100%"}>
+              <HStack
+                spacing={isWidthLargerThan800 ? "15rem" : "1rem"}
+                w={"100%"}
+              >
                 <Button
                   w={"10rem"}
                   bgColor={"main"}

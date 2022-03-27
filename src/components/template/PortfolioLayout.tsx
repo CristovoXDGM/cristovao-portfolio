@@ -25,7 +25,7 @@ const PortfolioLayout: React.FC = ({ children }) => {
   return (
     <Flex {...customFlexProp}>
       <Navheader />
-      <HStack h="80%" w={"100%"}>
+      <HStack h="90%" w={"100%"}>
         <Box h="100%" w="50%" bgColor={"main"}></Box>
         <Box h="100%" w="50%" bgColor={"placeHoldColor"}></Box>
       </HStack>
