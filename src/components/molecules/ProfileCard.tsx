@@ -20,6 +20,7 @@ import ProfilePic from "/images/PicProfile.png";
 const ProfileCard: React.FC = () => {
   const [isLargerThan1500] = useMediaQuery("(min-width:1500px)");
   const [isLargerThan800] = useMediaQuery("(min-width:800px)");
+
   return (
     <BoxAnimated
       bgColor={"main"}
@@ -35,7 +36,7 @@ const ProfileCard: React.FC = () => {
       left={0}
       mx="auto"
       my={"auto"}
-      boxShadow="0rem 0.2rem 0.5rem #ffecd184"
+      boxShadow="0rem 0.3rem 0.8rem #323232"
       borderRadius={"3xl"}
       overflow="hidden"
     >
