@@ -35,7 +35,6 @@ const CustomCarousel: React.FC = () => {
       activeIndex={CarouselIndex}
       onSelect={handleActiveIndex}
       indicators={false}
-      zIndex={1}
       prevIcon={
         <ChevronLeftIcon
           marginLeft={isWidthLargerThan800 ? "-25rem" : 0}
