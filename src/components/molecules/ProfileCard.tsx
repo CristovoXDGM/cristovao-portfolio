@@ -17,9 +17,21 @@ import {
 } from "../../styles/animatedComponents";
 import ProfilePic from "/images/PicProfile.png";
 
+import networkLinks from "../../utils/networkLinks.json";
+
+const networkLinkList = networkLinks.networkLinks;
+
 const ProfileCard: React.FC = () => {
   const [isLargerThan1500] = useMediaQuery("(min-width:1500px)");
   const [isLargerThan800] = useMediaQuery("(min-width:800px)");
+
+  const getNetworkItensList = () => {
+    return networkLinkList.map((item) => (
+      <Link _hover={{ color: "main" }} href={item.link_url} isExternal>
+        <Icon icon={item.icon} height={item.icon_height} />
+      </Link>
+    ));
+  };
 
   return (
     <BoxAnimated
@@ -74,11 +86,15 @@ const ProfileCard: React.FC = () => {
             A lover of technology and games, Looking for an opportunity to
             create innovative products and solutions. I really enjoy being
             self-taught, learning quickly whatever is necessary for the project,
-            main focusing on mobile development using Flutter. Follow my
-            contacts link bellow:
+            main focusing on mobile development using Flutter.
+          </Text>
+          <Text textAlign={"justify"} fontSize={"md"}>
+            <b>Skills </b>: Flutter, Dart, Javascript, React.Js, Scrum, TDD,
+            Clean Code , Clean Architecture etc. More info at my links below:
           </Text>
         </Stack>
       </Flex>
+
       <Box
         color={"secondary"}
         w={"100%"}
@@ -94,34 +110,7 @@ const ProfileCard: React.FC = () => {
           spacing={20}
           transform={isLargerThan800 ? "scale(1)" : "scale(0.5)"}
         >
-          <Link
-            _hover={{ color: "main" }}
-            href="https://www.instagram.com/kiustudios/"
-            isExternal
-          >
-            <Icon icon="ant-design:instagram-filled" height="3.2rem" />
-          </Link>
-          <Link
-            _hover={{ color: "main" }}
-            href="https://www.linkedin.com/in/cristovaofarias/"
-            isExternal
-          >
-            <Icon icon="akar-icons:linkedin-box-fill" height="2.8rem" />
-          </Link>
-          <Link
-            _hover={{ color: "main" }}
-            href="https://github.com/cristovoxdgm"
-            isExternal
-          >
-            <Icon icon="akar-icons:github-fill" height="2.8rem" />
-          </Link>
-          <Link
-            _hover={{ color: "main" }}
-            href="https://www.youtube.com/channel/UCUdmXvjS1pBarFUD5cUpeBQ"
-            isExternal
-          >
-            <Icon icon="ant-design:youtube-filled" height="3.8rem" />
-          </Link>
+          {getNetworkItensList()}
         </HStack>
       </Box>
     </BoxAnimated>

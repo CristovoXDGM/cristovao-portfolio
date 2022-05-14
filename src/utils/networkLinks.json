@@ -1,0 +1,27 @@
+{
+
+    "networkLinks":[
+        {
+            "icon":"ant-design:instagram-filled",
+            "icon_height":"3.3rem",
+            "link_url":"https://www.instagram.com/kiustudios/"
+        },
+        {
+            "icon":"akar-icons:linkedin-box-fill",
+            "icon_height":"2.8rem",
+            "link_url":"https://www.linkedin.com/in/cristovaofarias/"
+        },
+        {
+            "icon":"akar-icons:github-fill",
+            "icon_height":"2.8rem",
+            "link_url":"https://github.com/cristovoxdgm"
+        },
+        {
+            "icon":"ant-design:youtube-filled",
+            "icon_height":"3.8rem",
+            "link_url":"https://www.youtube.com/channel/UCUdmXvjS1pBarFUD5cUpeBQ"
+        }
+    ]
+
+
+}
