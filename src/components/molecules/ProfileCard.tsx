@@ -1,5 +1,6 @@
 import {
   Box,
+  Container,
   Flex,
   Heading,
   HStack,
@@ -36,8 +37,8 @@ const ProfileCard: React.FC = () => {
   return (
     <BoxAnimated
       bgColor={"main"}
-      width={isLargerThan1500 ? "40%" : "80%"}
-      height={isLargerThan1500 ? "60%" : "77%"}
+      width={isLargerThan1500 ? "55%" : "80%"}
+      height={isLargerThan1500 ? "70%" : "77%"}
       position="absolute"
       right={0}
       top={0}
@@ -47,7 +48,7 @@ const ProfileCard: React.FC = () => {
       animate="visible"
       left={0}
       mx="auto"
-      my={"auto"}
+      my="auto"
       boxShadow="0rem 0.3rem 0.8rem #323232"
       borderRadius={"3xl"}
       overflow="hidden"
@@ -77,21 +78,22 @@ const ProfileCard: React.FC = () => {
           h={isLargerThan1500 ? "100%" : "90%"}
           color={"secondary"}
           marginRight={isLargerThan1500 ? "5rem" : 0}
-          paddingTop={isLargerThan1500 ? 0 : "8rem"}
-          paddingX={isLargerThan1500 ? 0 : "2rem"}
-          overflowY={isLargerThan1500 ? "hidden" : "scroll"}
         >
-          <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
-          <Text textAlign={"justify"} fontSize={"md"}>
-            A lover of technology and games, Looking for an opportunity to
-            create innovative products and solutions. I really enjoy being
-            self-taught, learning quickly whatever is necessary for the project,
-            main focusing on mobile development using Flutter.
-          </Text>
-          <Text textAlign={"justify"} fontSize={"md"}>
-            <b>Skills </b>: Flutter, Dart, Javascript, React.Js, Scrum, TDD,
-            Clean Code , Clean Architecture etc. More info at my links below:
-          </Text>
+          <Container padding={"2"} centerContent>
+            <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
+            <br />
+            <Text textAlign={"justify"} fontSize={"md"}>
+              A lover of technology and games, Looking for an opportunity to
+              create innovative products and solutions. I really enjoy being
+              self-taught, learning quickly whatever is necessary for the
+              project, main focusing on mobile development using Flutter.
+            </Text>
+            <br />
+            <Text textAlign={"justify"} fontSize={"md"}>
+              <b>Skills </b>: Flutter, Dart, Javascript, React.Js, Scrum, TDD,
+              Clean Code , Clean Architecture etc. More info at my links below:
+            </Text>
+          </Container>
         </Stack>
       </Flex>
 
