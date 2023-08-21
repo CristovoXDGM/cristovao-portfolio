@@ -23,7 +23,7 @@ import networkLinks from "../../utils/networkLinks.json";
 const networkLinkList = networkLinks.networkLinks;
 
 const ProfileCard: React.FC = () => {
-  const [isLargerThan1500] = useMediaQuery("(min-width:1500px)");
+  const [isLargerThan1500] = useMediaQuery("(min-width:1148px)");
   const [isLargerThan800] = useMediaQuery("(min-width:800px)");
 
   const getNetworkItensList = () => {
@@ -81,14 +81,14 @@ const ProfileCard: React.FC = () => {
         >
           <Container padding={"2"} centerContent>
             <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
-            <br />
+            <Box h="20px" />
             <Text textAlign={"justify"} fontSize={"md"}>
               A lover of technology and games, Looking for an opportunity to
               create innovative products and solutions. I really enjoy being
               self-taught, learning quickly whatever is necessary for the
               project, main focusing on mobile development using Flutter.
             </Text>
-            <br />
+            <Box h="20px" />
             <Text textAlign={"justify"} fontSize={"md"}>
               <b>Skills </b>: Flutter, Dart, Javascript, React.Js, Scrum, TDD,
               Clean Code , Clean Architecture etc. More info at my links below:
