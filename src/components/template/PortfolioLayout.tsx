@@ -10,7 +10,12 @@ import {
 import React from "react";
 import CustomChakraLink from "../atoms/CustomChakraLink";
 import Navheader from "../molecules/Navheader";
-const PortfolioLayout: React.FC = ({ children }) => {
+
+type PortfolioLayoutProps = {
+  children: React.ReactNode;
+};
+
+const PortfolioLayout = (props: PortfolioLayoutProps) => {
   const customFlexProp: FlexProps = {
     alignItems: "center",
     flexDir: "column",
@@ -29,7 +34,7 @@ const PortfolioLayout: React.FC = ({ children }) => {
         <Box h="100%" w="50%" bgColor={"main"}></Box>
         <Box h="100%" w="50%" bgColor={"placeHoldColor"}></Box>
       </HStack>
-      {children}
+      {props.children}
       <HStack h="10%" w="100%" bgColor={"main"}>
         <VStack
           display={isLargerThan800 ? "flex" : "none"}

@@ -20,14 +20,14 @@ import ProfilePic from "/images/PicProfile.png";
 
 import networkLinks from "../../utils/networkLinks.json";
 
-const networkLinkList = networkLinks.networkLinks;
+const networkLinkList: any = networkLinks.networkLinks;
 
 const ProfileCard: React.FC = () => {
-  const [isLargerThan1500] = useMediaQuery("(min-width:1148px)");
+  const [isLargerThan1148] = useMediaQuery("(min-width:1300px)");
   const [isLargerThan800] = useMediaQuery("(min-width:800px)");
 
   const getNetworkItensList = () => {
-    return networkLinkList.map((item) => (
+    return networkLinkList.map((item: any) => (
       <Link _hover={{ color: "main" }} href={item.link_url} isExternal>
         <Icon icon={item.icon} height={item.icon_height} />
       </Link>
@@ -37,8 +37,8 @@ const ProfileCard: React.FC = () => {
   return (
     <BoxAnimated
       bgColor={"main"}
-      width={isLargerThan1500 ? "55%" : "80%"}
-      height={isLargerThan1500 ? "70%" : "77%"}
+      width={isLargerThan1148 ? "55%" : "80%"}
+      height={isLargerThan1148 ? "70%" : "77%"}
       position="absolute"
       right={0}
       top={0}
@@ -55,7 +55,7 @@ const ProfileCard: React.FC = () => {
     >
       <Flex flexDir={"row"} w={"100%"} h="80%">
         <Stack
-          display={isLargerThan1500 ? "flex" : "none"}
+          display={isLargerThan1148 ? "flex" : "none"}
           alignItems={"center"}
           justifyContent={"center"}
           w="50%"
@@ -74,10 +74,10 @@ const ProfileCard: React.FC = () => {
           spacing={10}
           alignItems={"center"}
           justifyContent={"center"}
-          w={isLargerThan1500 ? "50%" : "100%"}
-          h={isLargerThan1500 ? "100%" : "90%"}
+          w={isLargerThan1148 ? "50%" : "100%"}
+          h={isLargerThan1148 ? "100%" : "90%"}
           color={"secondary"}
-          marginRight={isLargerThan1500 ? "5rem" : 0}
+          marginRight={isLargerThan1148 ? "5rem" : 0}
         >
           <Container padding={"2"} centerContent>
             <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
@@ -102,7 +102,7 @@ const ProfileCard: React.FC = () => {
         w={"100%"}
         h="20%"
         bgColor={"placeHoldColor"}
-        scale={isLargerThan1500 ? 1 : 0.3}
+        scale={isLargerThan1148 ? 1 : 0.3}
       >
         <HStack
           h="100%"
