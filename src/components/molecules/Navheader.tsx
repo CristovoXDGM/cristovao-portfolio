@@ -47,8 +47,8 @@ const Navheader: React.FC = () => {
           </ListItem>
           <ListItem>
             <CustomChakraLink
-              href="/docs/CristovaoResume.pdf"
-              download={"CristovaoResume.pdf"}
+              href="/docs/CristovaoFariasResume.pdf"
+              download={"CristovaoFariasResume.pdf"}
               size={"md"}
             >
               Download Resume

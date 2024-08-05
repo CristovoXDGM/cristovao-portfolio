@@ -61,13 +61,13 @@ const ProfileCard: React.FC = () => {
           w="50%"
         >
           <Box borderRadius={"full"} h={"10rem"} w="10rem" marginBottom={20}>
-            <Image src={ProfilePic} />
+            <Image src={ProfilePic} loading="lazy" />
           </Box>
           <Heading color={"secondary"} size={"md"}>
             Cristovão Farias
           </Heading>
           <Text color={"secondary"} size={"sm"}>
-            Frontend / Mobile Engineer
+            z Frontend / Mobile Engineer
           </Text>
         </Stack>
         <Stack

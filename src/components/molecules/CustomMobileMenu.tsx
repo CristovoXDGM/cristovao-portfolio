@@ -36,8 +36,8 @@ const CustomMobileMenu: React.FC = () => {
         </MenuItem>
         <MenuItem
           as={Link}
-          href="/docs/CristovaoResume.pdf"
-          download={"CristovaoResume.pdf"}
+          href="/docs/CristovaoFariasResume.pdf"
+          download={"CristovaoFariasResume.pdf"}
         >
           Download Resume
         </MenuItem>
