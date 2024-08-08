@@ -16,7 +16,7 @@ import {
   BoxAnimated,
   boxAnimatedVariant,
 } from "../../styles/animatedComponents";
-import ProfilePic from "/images/PicProfile.png";
+import ProfilePic from "/public/images/profilepic.jpeg";
 
 import networkLinks from "../../utils/networkLinks.json";
 
@@ -28,7 +28,12 @@ const ProfileCard: React.FC = () => {
 
   const getNetworkItensList = () => {
     return networkLinkList.map((item: any) => (
-      <Link _hover={{ color: "main" }} href={item.link_url} isExternal>
+      <Link
+        _hover={{ color: "primaryFocus" }}
+        _active={{ color: "primary" }}
+        href={item.link_url}
+        isExternal
+      >
         <Icon icon={item.icon} height={item.icon_height} />
       </Link>
     ));
@@ -39,37 +44,20 @@ const ProfileCard: React.FC = () => {
       bgColor={"main"}
       width={isLargerThan1148 ? "55%" : "80%"}
       height={isLargerThan1148 ? "70%" : "77%"}
-      position="absolute"
-      right={0}
-      top={0}
-      bottom={0}
+      // position="absolute"
+      // right={0}
+      // top={0}
+      // bottom={0}
       variants={boxAnimatedVariant}
       initial="hidden"
       animate="visible"
-      left={0}
       mx="auto"
       my="auto"
-      boxShadow="0rem 0.3rem 0.8rem #323232"
+      // boxShadow="0rem 0.3rem 0.8rem #323232"
       borderRadius={"3xl"}
       overflow="hidden"
     >
       <Flex flexDir={"row"} w={"100%"} h="80%">
-        <Stack
-          display={isLargerThan1148 ? "flex" : "none"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          w="50%"
-        >
-          <Box borderRadius={"full"} h={"10rem"} w="10rem" marginBottom={20}>
-            <Image src={ProfilePic} loading="lazy" />
-          </Box>
-          <Heading color={"secondary"} size={"md"}>
-            Cristovão Farias
-          </Heading>
-          <Text color={"secondary"} size={"sm"}>
-            z Frontend / Mobile Engineer
-          </Text>
-        </Stack>
         <Stack
           spacing={10}
           alignItems={"center"}
@@ -77,23 +65,33 @@ const ProfileCard: React.FC = () => {
           w={isLargerThan1148 ? "50%" : "100%"}
           h={isLargerThan1148 ? "100%" : "90%"}
           color={"secondary"}
-          marginRight={isLargerThan1148 ? "5rem" : 0}
+          marginLeft={isLargerThan1148 ? "5rem" : 0}
         >
-          <Container padding={"2"} centerContent>
-            <Heading textAlign={"center"}>Hi! my name's Cristovão</Heading>
+          <Container padding={"4rem"} centerContent>
+            <Heading textAlign={"center"}>
+              Hi! What's up?<br></br> My name's Cristovão
+              <Box h="20px" />
+              <Text color={"primaryFocus"} textAlign={"center"} fontSize={"md"}>
+                I'm a Mobile Software Engineer with 8 years experience.
+                Passionate about App and Game development.
+              </Text>
+            </Heading>
             <Box h="20px" />
-            <Text textAlign={"justify"} fontSize={"md"}>
-              A lover of technology and games, Looking for an opportunity to
-              create innovative products and solutions. I really enjoy being
-              self-taught, learning quickly whatever is necessary for the
-              project, main focusing on mobile development using Flutter.
-            </Text>
-            <Box h="20px" />
-            <Text textAlign={"justify"} fontSize={"md"}>
-              <b>Skills </b>: Flutter, Dart, Javascript, React.Js, Scrum, TDD,
-              Clean Code , Clean Architecture etc. More info at my links below:
-            </Text>
           </Container>
+        </Stack>
+        <Stack
+          display={isLargerThan1148 ? "flex" : "none"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          w="50%"
+        >
+          <Image
+            height={"20rem"}
+            width={"15rem"}
+            fit={"cover"}
+            src={ProfilePic}
+            loading="lazy"
+          />
         </Stack>
       </Flex>
 
@@ -101,7 +99,7 @@ const ProfileCard: React.FC = () => {
         color={"secondary"}
         w={"100%"}
         h="20%"
-        bgColor={"placeHoldColor"}
+        bgColor={"main"}
         scale={isLargerThan1148 ? 1 : 0.3}
       >
         <HStack

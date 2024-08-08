@@ -19,6 +19,7 @@ const PortfolioLayout = (props: PortfolioLayoutProps) => {
   const customFlexProp: FlexProps = {
     alignItems: "center",
     flexDir: "column",
+
     color: "white",
     w: "100%",
     h: "100vh",
@@ -30,10 +31,7 @@ const PortfolioLayout = (props: PortfolioLayoutProps) => {
   return (
     <Flex {...customFlexProp}>
       <Navheader />
-      <HStack h="90%" w={"100%"}>
-        <Box h="100%" w="50%" bgColor={"main"}></Box>
-        <Box h="100%" w="50%" bgColor={"placeHoldColor"}></Box>
-      </HStack>
+
       {props.children}
       <HStack h="10%" w="100%" bgColor={"main"}>
         <VStack

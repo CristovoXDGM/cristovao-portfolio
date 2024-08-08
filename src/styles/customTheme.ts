@@ -30,11 +30,11 @@ export const theme = extendTheme({
         }
     },
     colors:{
-       main:"#323232",
-       primary:"#b29f92",
-       primaryFocus:"#4351fa",
-       secondary:"#ffffff",
-       placeHoldColor:"#a0affd"
+       main:"#EFD6AC",
+       primary:"#183A37",
+       primaryFocus:"#1E4945",
+       secondary:"#04151F",
+       placeHoldColor:"#171718"
     },
 
 });

@@ -66,16 +66,20 @@ const CustomCarousel: React.FC = () => {
                 border={"2px"}
                 borderColor={"primary"}
                 overflow={"hidden"}
-                borderRadius={"1.4rem"}
                 align={"center"}
                 m="auto"
                 justify={"center"}
                 my="2rem"
-                height={"24rem"}
                 w={isWidthLargerThan800 ? "100%" : "80%"}
                 bgColor={"main"}
               >
-                <Image fit={"cover"} src={project.image} alt={project.name} />
+                <Image
+                  height={"24rem"}
+                  width={"100%"}
+                  fit={"cover"}
+                  src={project.image}
+                  alt={project.name}
+                />
               </Flex>
               {isWidthLargerThan800 ? (
                 <Heading
